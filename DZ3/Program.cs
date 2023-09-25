@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DZ3
 {
@@ -56,27 +51,17 @@ namespace DZ3
                 Console.WriteLine("Введите число от 1 до 366, високосный год\n");
                 try
                 {
-                    day = Convert.ToInt32(Console.ReadLine());
-                    bool flag = int.TryParse(Console.ReadLine(), out day);
-                    if (day < 1 || day > 366)
-                    {
-                        Console.WriteLine("Введите целое число от 1 до 365\n");
-                        while (flag == false || (day < 1 || day > 366))
-                        {
-                            Console.WriteLine("Введите целое число от 1 до 366\n");
-                            flag = int.TryParse(Console.ReadLine(), out day);
-                        }
-                    }
+                    day = Convert.ToInt32(Console.ReadLine());                    
                 }
 
                 catch (System.FormatException)
                 {
                     Console.WriteLine("Введите целое число от 1 до 366\n");
                     bool flag = int.TryParse(Console.ReadLine(), out day);
-                    if (flag == false || (day < 1 || day > 366))
+                    if (flag == false)
                     {
                         Console.WriteLine("Введите целое число от 1 до 365\n");
-                        while (flag == false || (day < 1 || day > 366))
+                        while (flag == false)
                         {
                             Console.WriteLine("Введите целое число от 1 до 366\n");
                             flag = int.TryParse(Console.ReadLine(), out day);
@@ -128,9 +113,13 @@ namespace DZ3
                 {
                     Console.WriteLine($"Номеру {day} соответсвует {day - 305} {Months.November}");
                 }
-                else
+                else if (day >= 336 && day < 367)
                 {
                     Console.WriteLine($"Номеру {day} соответсвует {day - 335} {Months.December}");
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели число не подходящее условию");
                 }
             }
             else
@@ -139,28 +128,18 @@ namespace DZ3
                 try
                 {
                     day = Convert.ToInt32(Console.ReadLine());
-                    bool flag = int.TryParse(Console.ReadLine(), out day);
-                    if (day < 1 || day > 365)
-                    {
-                        Console.WriteLine("Введите целое число от 1 до 365\n");
-                        while (flag == false || (day < 1 || day > 365))
-                        {
-                            Console.WriteLine("Введите целое число от 1 до 365\n");
-                            flag = int.TryParse(Console.ReadLine(), out day);
-                        }
-                    }
                 }
 
                 catch (System.FormatException)
                 {
                     Console.WriteLine("Введите целое число от 1 до 365\n");
                     bool flag = int.TryParse(Console.ReadLine(), out day);
-                    if (flag == false || (day < 1 || day > 365))
+                    if (flag == false)
                     {
 
 
                         Console.WriteLine("Введите целое число от 1 до 365\n");
-                        while (flag == false || (day < 1 || day > 365))
+                        while (flag == false)
                         {
                             Console.WriteLine("Введите целое число от 1 до 365\n");
                             flag = int.TryParse(Console.ReadLine(), out day);
@@ -212,9 +191,13 @@ namespace DZ3
                 {
                     Console.WriteLine($"Номеру {day} соответсвует {day - 304} {Months.November}");
                 }
-                else
+                else if (day >= 335 && day < 366)
                 {
                     Console.WriteLine($"Номеру {day} соответсвует {day - 334} {Months.December}");
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели число не подходящее условию");
                 }
             }
 
