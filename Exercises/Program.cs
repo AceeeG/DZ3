@@ -18,7 +18,7 @@ namespace Exercises
         static void Main(string[] args)
         {
             int i = 0, num = 0, weekday = 0, count = 0;
-            Console.WriteLine("Упражнение 1\nПрограмма определит возрастает ли последовательность или нет.\nВведите первое число последовательности\n");
+            Console.WriteLine("Упражнение 1\nПрограмма определит возрастает ли последовательность или нет.\nВводите подряд числа последовательности, через Enter\n");
             bool flag = true;
             int[] nums = new int[10];
             do
