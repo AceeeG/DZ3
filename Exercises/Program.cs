@@ -13,6 +13,18 @@ namespace Exercises
         Суббота,
         Воскресенье
     }
+    enum Cards
+    {
+        Шестерка = 6,
+        Семёрка,
+        Восьмерка,
+        Девятка,
+        Десятка,
+        Валет,
+        Дама,
+        Король,
+        Туз
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -60,31 +72,31 @@ namespace Exercises
                 switch(num)
                 {
                     case 6:
-                        Console.WriteLine("Ваша карта 6\n");
+                        Console.WriteLine($"Ваша карта {Cards.Шестерка}\n");
                         break;
                     case 7:
-                        Console.WriteLine("Ваша карта 7\n");
+                        Console.WriteLine($"Ваша карта {Cards.Семёрка}\n");
                         break;
                     case 8:
-                        Console.WriteLine("Ваша карта 8\n");
+                        Console.WriteLine($"Ваша карта {Cards.Восьмерка}\n");
                         break;
                     case 9:
-                        Console.WriteLine("Ваша карта 9\n");
+                        Console.WriteLine($"Ваша карта {Cards.Девятка}\n");
                         break;
                     case 10:
-                        Console.WriteLine("Ваша карта 10\n");
+                        Console.WriteLine($"Ваша карта {Cards.Десятка}\n");
                         break;
                     case 11:
-                        Console.WriteLine("Ваша карта Валет\n");
+                        Console.WriteLine($"Ваша карта {Cards.Валет}\n");
                         break;
                     case 12:
-                        Console.WriteLine("Ваша карта Дама\n");
+                        Console.WriteLine($"Ваша карта {Cards.Дама}\n");
                         break;
                     case 13:
-                        Console.WriteLine("Ваша карта Король\n");
+                        Console.WriteLine($"Ваша карта {Cards.Король}\n");
                         break;
                     case 14:
-                        Console.WriteLine("Ваша карта туз\n");
+                        Console.WriteLine($"Ваша карта {Cards.Туз}\n");
                         break;
                     default:
                         Console.WriteLine("Вы ввели число которому не принадлежит ни одна карта\n");
